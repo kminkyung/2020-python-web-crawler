@@ -14,6 +14,8 @@ soup = BeautifulSoup(req, 'html.parser')
 
 i = 1
 thumbnails = soup.select('#imgList > div > a > img')
+print(thumbnails)
+
 for thumbnail in thumbnails:
     img = thumbnail['src']
     dload.save(img, f'img_homework/{i}.jpg')
